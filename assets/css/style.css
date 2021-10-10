@@ -22,6 +22,20 @@ header {
     align-items: center;
     background-attachment: fixed;
     background-position: 80%;
-    text-align: right;
+    text-align: center;
     height: 400px;
   }
+/* style changes to the heading DATE NIGHT GENERATOR*/
+  .date-night-generator {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font: weight 200; 
+  }
+  /* Search index input field*/
+
+.form {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
