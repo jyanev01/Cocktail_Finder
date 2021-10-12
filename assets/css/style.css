@@ -39,3 +39,15 @@ header {
   align-items: center;
   justify-content: center;
 }
+
+.drinkBox,
+.mealBox {
+  border: 1px solid green;
+  width: 500px;
+  height: 250px;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+}
