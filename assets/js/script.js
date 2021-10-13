@@ -5,6 +5,9 @@ var cocktailImg = document.querySelector(".imgClass");
 var mealBoxID = document.getElementById('mealBoxID');
 var mealName = document.querySelector('.mealName');
 var imgDrink = document.querySelector('.imgDrink');
+var mealInstructions = document.querySelector('.mealInstructions');
+var mealIngredrients = document.querySelector('.mealIngredients')
+
 
 // function mealFunction() {
 //   fetch('https://www.themealdb.com/api/json/v1/1/random.php')
@@ -22,7 +25,7 @@ var imgDrink = document.querySelector('.imgDrink');
   //       .then(function(response) {
   //       console.log(response);
 
-  //       var displayMealContainerEl = document.querySelector("#mealBoxID");
+  //     var displayMealContainerEl = document.querySelector("#mealBoxID");
 
   //       //empty div before appending image
   //       displayMealContainerEl.innerHTML="";
@@ -45,15 +48,23 @@ var imgDrink = document.querySelector('.imgDrink');
 
         //picks a random drink from array of drink types
         let drinkApiArray = data.drinks;
-        let drinkRandom = drinkApiArray[Math.floor(Math.random()*drinkApiArray.length)].strDrink;
-        console.log(drinkRandom);
+        let n = [Math.floor(Math.random()*drinkApiArray.length)];
+        console.log(n);
+        var drinkRandom = data.drinks[n].strDrink;
+
+        console.log(drinkRandom)
+
+        // let drinkRandom = drinkApiArray[Math.floor(Math.random()*drinkApiArray.length)].strDrink;
+        // console.log(drinkRandom);
+
 
         //displays drink data on the app
         cocktailName.innerHTML = "Your Cocktail is a: " + drinkRandom;
+        
         var drinkDivEl = document.querySelector('#drink-container');
         drinkDivEl.innerHTML = "";
         var drinkImg = document.createElement('img');
-        drinkImg.setAttribute('src',);
+        drinkImg.setAttribute('src', data.drinks[n].strDrinkThumb);
         drinkDivEl.appendChild(drinkImg)
 
       })
@@ -74,19 +85,31 @@ var imgDrink = document.querySelector('.imgDrink');
       .then(data => {
         console.log(data);
       
+
         //pull information from API
       var mealNameValue = (data.meals[0].strMeal);
-      console.log(mealNameValue)
+      console.log(mealNameValue);
 
+
+      var displayMealContainerEl = document.querySelector("#meal-container");
+
+            //empty div before appending image
+            displayMealContainerEl.innerHTML="";
+    
+          var mealImg = document.createElement('img');
+          mealImg.setAttribute('src', data.meals[0].strMealThumb);
+    
+          displayMealContainerEl.appendChild(mealImg);
+
+
+      var mealInstructionsValue = (data.meals[0].strInstructions);
       
       //display info from API on screen
       mealName.innerHTML = "Your Meal is: " + mealNameValue;
+      mealInstructions.innerHTML = mealInstructionsValue;
 
-
-
-    })
-
-  });
+  })
+});
 
 
   // function drinkFunction () {
@@ -120,8 +143,4 @@ var imgDrink = document.querySelector('.imgDrink');
   //         displayDrinkContainerEl.appendChild(drinkImg);
 
   //         });}
-
-
-
-
 
