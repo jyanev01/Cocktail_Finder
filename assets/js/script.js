@@ -40,18 +40,21 @@ var imgDrink = document.querySelector('.imgDrink');
       .then(Response => Response.json())
       .then(data => {
 
+        //displays all liquor type drink data
         console.log(data);
 
-        var cocktailNameValue = (data.drinks[5].strDrink);
-        console.log(cocktailNameValue);
+        //picks a random drink from array of drink types
+        let drinkApiArray = data.drinks;
+        let drinkRandom = drinkApiArray[Math.floor(Math.random()*drinkApiArray.length)].strDrink;
+        console.log(drinkRandom);
 
-
-        cocktailName.innerHTML = "Your Cocktail is a: " + cocktailNameValue;
-        // var drinkDivEl = document.querySelector('#drink-container');
-        // drinkDivEl.innerHTML = "";
-        // var drinkImg = document.createElement('img');
-        // drinkImg.setAttribute('src', data.drinks[5].strDrinkThumb.url);
-        // drinkDivEl.appendChild(drinkImg)
+        //displays drink data on the app
+        cocktailName.innerHTML = "Your Cocktail is a: " + drinkRandom;
+        var drinkDivEl = document.querySelector('#drink-container');
+        drinkDivEl.innerHTML = "";
+        var drinkImg = document.createElement('img');
+        drinkImg.setAttribute('src',);
+        drinkDivEl.appendChild(drinkImg)
 
       })
 
@@ -63,12 +66,15 @@ var imgDrink = document.querySelector('.imgDrink');
         console.log(drinkInstructions);
       })
 
-    fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+   
+   //fetch random meal and display
+   
+      fetch('https://www.themealdb.com/api/json/v1/1/random.php')
       .then(Response => Response.json())
       .then(data => {
-      // createMeal(data.meals[0]);
         console.log(data);
-      //pull information from API
+      
+        //pull information from API
       var mealNameValue = (data.meals[0].strMeal);
       console.log(mealNameValue)
 
