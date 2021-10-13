@@ -1,10 +1,25 @@
 
+function mealFunction () {  
+    fetch ('https://www.themealdb.com/api/json/v1/1/random.php')
+  
+      .then(function(response) {
+      return response.json();
+      })
+      .then(function(response) {
+      console.log(response);
+  
+      var displayMealContainerEl = document.querySelector("#mealBoxID");
+  
+      //empty div before appending image
+      displayMealContainerEl.innerHTML="";
+  
+    var mealImg = document.createElement('img');
+    mealImg.setAttribute('src', response.meals.strMealThumb);
 
-// fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-// .then(Response => Response.json())
-// .then (data => {
-//     var mealTitle = data.meals.strMeal;
+    displayMealContainerEl.appendChild(mealImg);
+  
+    });}
 
-//     mealTitle.innerHTML = mealTitle;
-// })
+searchButton.onclick = mealFunction();
+
 
