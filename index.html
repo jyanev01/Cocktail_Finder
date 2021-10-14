@@ -1,4 +1,4 @@
-git <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -33,10 +33,10 @@ git <!DOCTYPE html>
     <!--input form-->
     <div>
         <form class='form'>
-            <label for="cocktail-name">Type Your Favorite Cocktail!</label>
-            <input type="text" id="cocktail-name" placeholder="Gin" />
+            <label for="cocktail-name">What are you drinking tonight?</label>
+            <input type="text" id="cocktail-name" class = "form-input" placeholder="Type a liquor" />
 
-            <input class="button-primary" type="submit" value="submit input">
+            <input id="searchButton" class="button-primary" type="submit" value="Generate">
         </form>
     </div>
 
@@ -45,12 +45,20 @@ git <!DOCTYPE html>
     <!--results-->
     <!--results 1 drink-->
 
-    <div class="drinkBox">
-        <P>Cocktail Name!</p>
+    <div id="drinkBoxID" class="drinkBox">
+        <P>Your cocktail is: </p>
+        <h4 class="cocktailName"></h4>
+        <div id="drink-container" class="imgDrink"></div>
+        <div class="drinkInstructions "></div>
+
+
     </div>
     <!--results 2 meal-->
-    <div class="mealBox" id="searchMeal">
-        <p>Meal!</P>
+    <div id="mealBoxID" class="mealBox">
+        <p>Your meal is: </P>
+        <h4 class="mealName"></h4>
+        <div id="meal-container" class="imgMeal"></div>
+        <div class="mealInstructions "></div>
     </div>
 
 
