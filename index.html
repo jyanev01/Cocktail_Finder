@@ -15,27 +15,50 @@
 <body>
     <!--header-->
     <header>
-        <h1>Date Night Generator</h1>
+        <h1 class="Date-Night-Generator">Date Night Generator</h1>
     </header>
 
     <!-- hero/jumbotron -->
     <section class="hero">
         <p>
-            Explain App features
+            Explain App features: 1) Pick you favorite liquor; gin, vodka, tequilla, etc.
+            App will randomly provide the recipe for a cool cocktail with the alcohol you have selected.
+            Then a random meal will be selected "as a suggestion" to pair with your cocktails.
+            Perfect for any occasion or just the occasional "Date Night"
+        </p>
+        </p>
         </p>
     </section>
 
     <!--input form-->
     <div>
-        <input class="button-primary" type="submit" value="submit input">
+        <form class='form'>
+            <label for="cocktail-name">What are you drinking tonight?</label>
+            <input type="text" id="cocktail-name" class = "form-input" placeholder="Type a liquor" />
+
+            <input id="searchButton" class="button-primary" type="submit" value="Generate">
+        </form>
     </div>
+
 
 
     <!--results-->
     <!--results 1 drink-->
+
+    <div id="drinkBoxID" class="drinkBox">
+        <P>Your cocktail is: </p>
+        <h4 class="cocktailName"></h4>
+        <div id="drink-container" class="imgDrink"></div>
+        <div class="drinkInstructions "></div>
+
+
+    </div>
     <!--results 2 meal-->
-    <div>
-        <h2 class="mealTitle"></h2>
+    <div id="mealBoxID" class="mealBox">
+        <p>Your meal is: </P>
+        <h4 class="mealName"></h4>
+        <div id="meal-container" class="imgMeal"></div>
+        <div class="mealInstructions "></div>
     </div>
 
 
