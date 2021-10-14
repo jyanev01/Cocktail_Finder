@@ -6,6 +6,7 @@ var mealBoxID = document.getElementById('mealBoxID');
 var mealName = document.querySelector('.mealName');
 var imgDrink = document.querySelector('.imgDrink');
 var mealInstructions = document.querySelector('.mealInstructions');
+var drinkInstructions = document.querySelector('.drinkInstructions');
 var mealIngredrients = document.querySelector('.mealIngredients')
 
 
@@ -71,21 +72,15 @@ var mealIngredrients = document.querySelector('.mealIngredients')
 
   function findDrinkRecipe(drinkRandom) {
     drinkRandom = drinkRandom.split(" ").join("+").toLowerCase();
-    var requestOptions = {
-      method: "GET",
-      headers: "myHeaders",
-      redirect: "follow",
-    }
     console.log(drinkRandom);
-    fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + drinkRandom, requestOptions)
-    .then(response => {
-      console.log(response)
-      response.json()
-    }) 
+
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + drinkRandom)
+    .then(response => response.json()) 
     .then(data => {
       console.log(data)
-      var drinkInstructions = (data.drinks[0].strInstructions);
-      console.log(drinkInstructions);
+      var drinkInstruction = (data.drinks[0].strInstructions);
+      console.log(drinkInstruction);
+      drinkInstructions.innerHTML = drinkInstruction;
     })
   }
 
