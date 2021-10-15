@@ -52,16 +52,22 @@ header {
   padding: 30px;
 }
 
+.results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .drinkBox,
 .mealBox {
+  flex: 1 1 500px;
   background-color: var(--tertiary-color);
   border: 1px solid rgb(1, 29, 1);
   font-family: inherit;
   color: var(--secondary-color);
-  width: 500px;
+  /*width: 500px;*/
   height: auto;
   margin: 60px;
-  float: left;
+  /*float: left;*/
   justify-content: center;
   align-items: center;
   text-align: center;
