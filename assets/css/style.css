@@ -43,6 +43,7 @@ header {
     align-items: center;
     justify-content: center;
     font: weight 200; 
+    color: rgb(255, 255, 255);
   }
   /* Search index input field*/
 
@@ -51,6 +52,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 30px;
+  font-size: 18px;
 }
 
 #results {
@@ -89,5 +91,3 @@ img {
   height: 80px;
   width: 30px;
 }
-
-
