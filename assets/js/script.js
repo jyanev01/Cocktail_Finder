@@ -35,7 +35,7 @@ var mealIngredrients = document.querySelector('.mealIngredients')
         drinkDivEl.appendChild(drinkImg)
 
         findDrinkRecipe(drinkRandom);
-      })
+      });
 
 
    
@@ -68,7 +68,7 @@ var mealIngredrients = document.querySelector('.mealIngredients')
       mealName.innerHTML =  mealNameValue;
       mealInstructions.innerHTML = "Instructions: " + mealInstructionsValue;
 
-  })
+  });
 
   function findDrinkRecipe(drinkRandom) {
     drinkRandom = drinkRandom.split(" ").join("+").toLowerCase();
@@ -121,4 +121,4 @@ function myFunction () {
   //
   displayGifContainerEl.appendChild(gifImg);
 
-  });}
+  });};
