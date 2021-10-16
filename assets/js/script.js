@@ -83,8 +83,6 @@ var mealIngredrients = document.querySelector('.mealIngredients')
       drinkInstructions.innerHTML = drinkInstruction;
     })
   }
-
-
 });
 
 
