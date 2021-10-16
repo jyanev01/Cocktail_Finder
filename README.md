@@ -14,7 +14,9 @@ TheMealDB API
 TheCocktailDB API 
 
 [Link to github repository](https://github.com/jyanev01/Cocktail_Finder)
-[Link to deployed application] (https://jyanev01.github.io/Cocktail_Finder/)
+
+[Link to deployed application](https://jyanev01.github.io/Cocktail_Finder/)
+
 [Link to class presentation](https://docs.google.com/presentation/d/1p68AiGmVcEqbAGgg3e8p6IZrfnZvDJHxR5sicG-vH5w/edit?usp=sharing)
 
 Images:
