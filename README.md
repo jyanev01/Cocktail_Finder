@@ -7,10 +7,15 @@ Date Night Generator is an application with a searchable base of liquors that wi
 Motivation to create Date Night Generator was based on the everyday problem most of us face at dinner time to think of creating a meal. While recognizing plenty of recipe sites exist to serve recipe searchability, we realized there was a niche market opportunity to tackle both what to eat AND drink, especially when most date night diners yearn to create something outside of the norm. Searchable drink database allows the user to more accurately pinpoint a beverage based on a liquor they already own, while the randomized recipe keeps options fun and interesting. 
 
 Technologies Used:
-HTML
-Javascript
-Skeleton CSS Framework
-TheMealDB API
+
+HTML,
+
+Javascript,
+
+Skeleton CSS Framework,
+
+TheMealDB API,
+
 TheCocktailDB API 
 
 [Link to github repository](https://github.com/jyanev01/Cocktail_Finder)
