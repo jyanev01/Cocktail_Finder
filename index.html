@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cocktail Finder</title>
+    <title>Date Night Generator</title>
     <link rel="stylesheet" href="assets/css/normalize.css" />
     <link rel="stylesheet" href="assets/css/skeleton.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -20,13 +20,11 @@
 
     <!-- hero/jumbotron -->
     <section class="hero">
-        <p>
-            Explain App features: 1) Pick you favorite liquor; gin, vodka, tequilla, etc.
-            App will randomly provide the recipe for a cool cocktail with the alcohol you have selected.
-            Then a random meal will be selected "as a suggestion" to pair with your cocktails.
-            Perfect for any occasion or just the occasional "Date Night"
-        </p>
-        </p>
+        <p class="hero text">
+            Pick your favorite liquor -- gin, vodka, tequila, etc.<br/>
+            Date Night Generator will randomly provide the recipe<br/>          for a cool cocktail with the alcohol you have selected.<br/>
+            Then a random meal will be selected as a suggestion<br/>          to pair with your cocktails.<br/>
+            Perfect for any occasion or just the occasional "Date Night".
         </p>
     </section>
 
@@ -34,36 +32,32 @@
     <div>
         <form class='form'>
             <label for="cocktail-name">What are you drinking tonight?</label>
-            <input type="text" id="cocktail-name" class = "form-input" placeholder="Type a liquor" />
+            <input type="text" id="cocktail-name" class = "form-input" placeholder="Enter a liquor"/>
 
             <input id="searchButton" class="button-primary" type="submit" value="Generate">
         </form>
     </div>
 
-
-
-    <!--results-->
-    <!--results 1 drink-->
-
+    <!--results section-->
+<div id="results">
+    <!--drink results-->
     <div id="drinkBoxID" class="drinkBox">
-        <P>Your cocktail is: </p>
+        <p>Your cocktail is:</p>
         <h4 class="cocktailName"></h4>
-        <div id="drink-container" class="imgDrink"></div>
-        <div class="drinkInstructions "></div>
-
-
+        <div id="drink-container" class="imgDrink" role="text" aria-label="Drink based on liquor selection"></div>
+            <div class="drinkInstructions "></div>
     </div>
-    <!--results 2 meal-->
+
+    <!--meal results-->
     <div id="mealBoxID" class="mealBox">
-        <p>Your meal is: </P>
+        <p>Your meal is:</p>
         <h4 class="mealName"></h4>
-        <div id="meal-container" class="imgMeal"></div>
-        <div class="mealInstructions "></div>
+        <div id="meal-container" class="imgMeal" role="text" aria-label="Random meal"></div>
+            <div class="mealInstructions "></div>
     </div>
+</div>
 
-
-    <script src="assets/js/script.js"></script>
+<script src="assets/js/script.js"></script>
 
 </body>
-
 </html>
