@@ -32,4 +32,3 @@ TheCocktailDB API
 <img src="./assets/images/deployed1.png">
 <img src="./assets/images/deployed2.png">
 <img src="./assets/images/deployed3.png">
-<img src="./assets/images/deployed4.png">
